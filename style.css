@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open sans', Arial, 'Sans serif';
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: start;
+    background-image: url(../files/Images/Background3.jpg);
+    background-attachment: fixed;
+}
+
+#titre_intro {
+    font-family: 'Lobster Two';
+    font-size: 1.3em;
+    text-align: center;
+}
+
+#image_intro {
+    float: right;
+    text-align: right;
+}
+
+h1, h2, h3 {
+    color: rgb(179, 42, 0);
+}
+
+h2, h3 {
+    text-decoration: underline;
+}
+
+.mini_font_size {
+    font-size: 0.7em;
+}
+
+.no_underlign {
+    text-decoration: none;
+}
