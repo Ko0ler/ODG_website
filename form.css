@@ -1,36 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
 
-<<<<<<< HEAD
 body {
-=======
-@supports (display: flex) {
-    @media screen and (max-width: 900px) {
-
-        header, main {
-        display: flex;
-        flex-direction: column;
-        }
-
-        p, ul {
-            width: 300px;
-            height: 160px;
-            text-align: justify;
-            overflow: auto;
-        }
-
-        form {
-            width: 350px;
-            height: 210px;
-            text-align: justify;
-            overflow: auto;
-        }
-    }
-}
-
-body {
-    font-size: 1.2em;
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     font-weight: 500;
     background-color: rgb(221, 221, 221);
     background-image: url('files/Images/Pattern.png');
@@ -38,34 +9,20 @@ body {
 
 header {
     font-family: 'Lobster Two';
-<<<<<<< HEAD
     font-size: larger;
-=======
-    font-size: 1.3em;
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     text-align: center;
     padding-bottom: 1.5em;
 }
 
 main {
     font-family: 'Open sans', Arial, 'Sans serif';
-<<<<<<< HEAD
     font-size: large;
-=======
-}
-
-form {
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     margin: 1em 10em 0 10em;
 }
 
 footer {
     font-family: 'Open sans';
-<<<<<<< HEAD
     font-size: smaller;
-=======
-    font-size: 0.75em;
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     background-color: silver;
     border-radius: 80px 10px 80px 10px;
     padding: 0.5em 0 1em 3em;
@@ -110,10 +67,7 @@ input, select {
 fieldset {
     border: 0.2em solid silver;
     border-radius: 0.5em;
-<<<<<<< HEAD
     width: auto;
-=======
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
 }
 
 textarea {
@@ -187,7 +141,6 @@ a:focus {
 .grey {
     color: grey;
 }
-<<<<<<< HEAD
 
 @supports (display: flex) {
     @media screen and (max-width: 1340px) {
@@ -242,5 +195,3 @@ a:focus {
         }
     }
 }
-=======
->>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
