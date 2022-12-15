@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
 
+<<<<<<< HEAD
 
 body {
     font-weight: 500;
@@ -10,13 +11,43 @@ body {
     scroll-behavior: smooth;
 }
 
+=======
+@supports (display: flex) {
+    @media screen and (max-width: 900px) {
+
+        header, main {
+        display: flex;
+        flex-direction: column;
+        }
+
+        p, ul {
+            width: 300px;
+            height: 210px;
+            text-align: justify;
+            overflow: auto;
+        }
+    }
+}
+
+body {
+    font-size: 1.2em;
+    font-weight: 500;
+    background-image: url('files/Images/Background1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
 header {
     font-family: 'Lobster Two';
     font-size: larger;
     text-align: center;
     background: linear-gradient(90deg, #12c2e950, #c471ed50, #f64f5950);
     padding: 1.5em 0 1.5em 0;
+<<<<<<< HEAD
     position: static;
+=======
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
 }
 
 nav {
@@ -24,6 +55,11 @@ nav {
     margin-top: 0.5em;
     position: sticky;
     top: 0;
+<<<<<<< HEAD
+=======
+    display: flex;
+    flex-direction: column;
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
 }
 
 .nav_background {
@@ -33,14 +69,21 @@ nav {
 }
 
 main {
+<<<<<<< HEAD
     font-size: large;
+=======
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     font-family: 'Open sans', Arial, 'Sans serif';
     margin: 1em 3em 0.5em 5.3em;
 }
 
 footer {
     font-family: 'Open sans';
+<<<<<<< HEAD
     font-size: smaller;
+=======
+    font-size: 0.75em;
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
     background: linear-gradient(-90deg, #12c2e950, #c471ed50, #f64f5950);
     border-radius: 80px 10px 80px 10px;
     padding: 0.5em 0 1em 3em;
@@ -183,6 +226,7 @@ a:focus {
 
 .circle_ul {
     list-style-type: circle;
+<<<<<<< HEAD
 }
 
 @supports (display: flex) {
@@ -251,4 +295,6 @@ a:focus {
             min-width: min-content;
         }
     }
+=======
+>>>>>>> b4924a8503f4561d8eb69a07eeef141dd6ad07e4
 }
