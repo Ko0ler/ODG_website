@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 
 body {
-    font-weight: 500;
     background-image: url('files/Images/Background1.jpg');
     background-attachment: fixed;
     background-size: cover;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -15,15 +14,12 @@ header {
     font-size: larger;
     text-align: center;
     background: linear-gradient(90deg, #12c2e950, #c471ed50, #f64f5950);
-    padding: 1.5em 0 1.5em 0;
-    position: static;
+    padding: 1em 0 1em 0;
 }
 
 nav {
     font-family: 'Open sans';
     margin-top: 0.5em;
-    position: sticky;
-    top: 0;
 }
 
 .nav_background {
@@ -32,10 +28,25 @@ nav {
     background-color: #ffd6da;
 }
 
+#hearder_nav {
+    position: sticky;
+    top: 0;
+    padding-bottom: 1.5em;
+}
+
 main {
-    font-size: large;
-    font-family: 'Open sans', Arial, 'Sans serif';
-    margin: 1em 3em 0.5em 5.3em;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-family: 'Montserrat', 'Open sans', Arial, 'Sans serif';
+    text-align: justify;
+    margin: 1em 7em 0.5em 7em;
+}
+
+#main_footer_scroll {
+    height: 77%;
+    overflow: scroll;
+    position: fixed;
+    bottom: 0;
 }
 
 footer {
@@ -64,7 +75,6 @@ footer {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 2em;
-    margin-top: 2em;
 }
 
 .container_formations {
@@ -81,7 +91,7 @@ footer {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 2em;
-    margin-top: 2em;
+    margin-top: 5em;
 }
 
 #footer_container_top {
@@ -187,11 +197,13 @@ a:focus {
 
 @supports (display: flex) {
 
+    /* Widths */
+
     @media screen and (max-width: 1133px) {
 
         main {
-            margin: 0.7em 2em 0.5em 3em;
-            font-size: medium;
+            margin: 0.7em 5em 0.5em 6em;
+            font-size: small;
         }
 
         #profil_image {
@@ -206,6 +218,10 @@ a:focus {
 
     @media screen and (max-width: 878px) {
 
+        main {
+            margin: 0.5em 5em 0.4em 5em;
+        }
+
         section[class="container_formations"] {
             display: flex;
             flex-direction: column-reverse;
@@ -217,11 +233,11 @@ a:focus {
         }
     }
     
-    @media screen and (max-width: 556px) {
+    @media screen and (max-width: 680px) {
 
         main {
-            margin: 1.2em;
-            font-size: small;
+            margin: 1.1em;
+            font-size: smaller;
             text-align: justify;
         }
 
@@ -235,13 +251,12 @@ a:focus {
 
         footer {
             border-radius: 0;
+            font-size: x-small;
         }
 
-        footer section {
+        #footer_container_top {
             flex-direction: column;
-            justify-content: left;
             gap: 1em;
-            padding: 0;
         }
 
     }
@@ -249,6 +264,32 @@ a:focus {
     @media screen and (max-width: 320px) {
         body {
             min-width: min-content;
+        }
+    }
+
+    /* Heights */
+
+    @media screen and (min-height: 1180px) {
+        
+        #main_footer_scroll {
+            height: 80%;
+            overflow: scroll;
+            position: fixed;
+            bottom: 0;
+        }
+    }
+
+    @media screen and (max-height: 950px) {
+        
+        #main_footer_scroll {
+            height: 72%;
+        }
+
+    }
+
+    @media screen and (max-height: 810px) {
+        #main_footer_scroll {
+            height: 67%;
         }
     }
 }
