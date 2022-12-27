@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
 
+@keyframes fadein {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 body {
-    background-color: #fafafa;
+    animation: fadein 1.5s;
+    background-color: white;
     font-family: 'Open sans';
     font-size: larger;
     text-align: center;
@@ -11,27 +20,17 @@ body {
     }
 
 h1 {
-animation: fadein 3s;
-font-size: 36px;
-}
-
-@keyframes fadein {
-from {
-    opacity: 0;
-}
-to {
-    opacity: 1;
-}
+    color: #12c2e9;
 }
 
 p {
     font-size: medium;
 }
 
-a {
+a[href="index.html"] {
+    animation: fadein 1.5s alternate-reverse 2s infinite;
     color: #12c2e9;
     text-decoration: none;
-    transition: all 0.2s;
     }
     
     a:hover {
