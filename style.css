@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
+@keyframes fadein {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 body {
     background-image: url('files/Images/Background1.jpg');
@@ -153,15 +161,15 @@ a {
 }
 
 #form_link {
-    text-align: start;
-    margin-top: 4em;
-    color: rgb(179, 42, 0);
+    animation: fadein 1s alternate-reverse 0.1s infinite;
+    text-align: center;
+    margin: 5em 0 8em 0;
 }
 
 #form_link_background {
     background-color: #12c2e930;
-    border-radius: 0.8em;
-    padding: 0.3em;
+    border-radius: 0.6em;
+    padding: 1em;
 }
 
 header:hover {
@@ -198,11 +206,13 @@ a:focus {
     list-style-type: circle;
 }
 
+
 @supports (display: flex) {
+
 
     /* WIDTH */
 
-    /* Computer */
+    /* Tablet and medium screens */
 
     @media screen and (max-width: 1133px) {
 
@@ -221,7 +231,7 @@ a:focus {
         }
     }
 
-    /* Tablet */
+    /* Mini tablet and small screens */
 
     @media screen and (max-width: 878px) {
 
@@ -240,7 +250,7 @@ a:focus {
         }
     }
     
-    /* Mini tablet and mobile */
+    /* Mobile */
 
     @media screen and (max-width: 680px) {
 
