@@ -16,7 +16,7 @@ header {
 main {
     font-family: 'Open sans', Arial, 'Sans serif';
     font-size: large;
-    margin: 4%
+    margin: 2em;
 }
 
 footer {
@@ -25,7 +25,7 @@ footer {
     background-color: silver;
     border-radius: 80px 10px 80px 10px;
     padding: 0.5em 0 1em 3em;
-    margin: 5em 1em 0.5em 1em;
+    margin: 5em 1em 0.1em 1em;
 }
 
 .order_one {
@@ -63,6 +63,7 @@ footer {
 }
 
 input, select {
+    font-size: smaller;
     border: 0.2em solid silver;
     border-radius: 0.5em;
     padding: 0.3em;
@@ -136,7 +137,7 @@ a:focus {
 }
 
 .mini_font_size {
-    font-size: 0.8em;
+    font-size: x-small;
 }
 
 .bold_grey {
@@ -153,19 +154,45 @@ a:focus {
 }
 
 @supports (display: flex) {
+
+    /* WIDTH */
+
+    /* Mini tablet and mobile */
+
     @media screen and (max-width: 518px) {
 
         body {
-            min-width: min-content;
+            font-size: small;
         }
 
         main {
             font-size: small;
-            margin: 1%;
+            margin: 3em 1em 2em 1em;
+        }
+
+        .order_three {
+            align-self: center;
         }
 
         footer {
             border-radius: 0;
+            padding-bottom: 2em;
+            margin: 0 -0.5em 0 -0.5em;
+        }
+
+        #footer_container_top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
         }
     }
+
+    /* Width limit */
+
+    @media screen and (max-width: 320px) {
+        body {
+            min-width: min-content;
+        }
+    }
+    
 }

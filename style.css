@@ -7,6 +7,7 @@ body {
     background-image: url('files/Images/Background1.jpg');
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -28,7 +29,7 @@ nav {
     background-color: #ffd6da;
 }
 
-#hearder_nav {
+#header_nav {
     position: sticky;
     top: 0;
     padding-bottom: 1.5em;
@@ -43,8 +44,10 @@ main {
 }
 
 #main_footer_scroll {
+    margin-right: 0.8em;
     height: 77%;
     overflow: scroll;
+    overflow-x: hidden;
     position: fixed;
     bottom: 0;
 }
@@ -55,7 +58,7 @@ footer {
     background: linear-gradient(-90deg, #12c2e950, #c471ed50, #f64f5950);
     border-radius: 80px 10px 80px 10px;
     padding: 0.5em 0 1em 3em;
-    margin: 5em 1em 0.5em 1em;
+    margin: 5em 1em 0.1em 1em;
 }
 
 .order_one {
@@ -197,7 +200,9 @@ a:focus {
 
 @supports (display: flex) {
 
-    /* Widths */
+    /* WIDTH */
+
+    /* Computer */
 
     @media screen and (max-width: 1133px) {
 
@@ -210,11 +215,13 @@ a:focus {
             padding: 0 -15em 0 -15em;
         }
 
-        section[class="container_a_propos"], section[class="container_competences"] {
+        .container_a_propos, .container_competences {
             display: flex;
             flex-direction: column;
         }
     }
+
+    /* Tablet */
 
     @media screen and (max-width: 878px) {
 
@@ -233,7 +240,13 @@ a:focus {
         }
     }
     
+    /* Mini tablet and mobile */
+
     @media screen and (max-width: 680px) {
+
+        #header_nav {
+            font-size: small;
+        }
 
         main {
             margin: 1.1em;
@@ -251,15 +264,18 @@ a:focus {
 
         footer {
             border-radius: 0;
+            padding-bottom: 2em;
             font-size: x-small;
         }
 
         #footer_container_top {
             flex-direction: column;
-            gap: 1em;
+            gap: 1.5em;
         }
 
     }
+
+    /* Width limit */
 
     @media screen and (max-width: 320px) {
         body {
@@ -267,7 +283,7 @@ a:focus {
         }
     }
 
-    /* Heights */
+    /* HEIGHT */
 
     @media screen and (min-height: 1180px) {
         
@@ -282,14 +298,14 @@ a:focus {
     @media screen and (max-height: 950px) {
         
         #main_footer_scroll {
-            height: 72%;
+            height: 79%;
         }
 
     }
 
     @media screen and (max-height: 810px) {
         #main_footer_scroll {
-            height: 67%;
+            height: 73%;
         }
     }
 }
