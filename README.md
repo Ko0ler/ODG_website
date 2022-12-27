@@ -1,6 +1,6 @@
-# Portfolio Website
+# ODG_website
 
-Welcome to my portfolio website! This website showcases my projects and accomplishments as a developer, designer, and creative professional.
+Welcome to my website! This is a portfolio website that showcases my projects and accomplishments as a developer, designer, and creative professional. I study in networking and security at university, and i'm learning sofware engineering and web development with side projects
 
 ## Pages
 
