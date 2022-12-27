@@ -12,7 +12,6 @@
 
 body {
     animation: fadein 1.5s;
-    background-color: white;
     font-family: 'Open sans';
     font-size: larger;
     text-align: center;
@@ -25,6 +24,7 @@ h1 {
 
 p {
     font-size: medium;
+    color: grey;
 }
 
 a[href="index.html"] {
