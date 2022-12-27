@@ -27,7 +27,7 @@ p {
     font-size: medium;
 }
 
-a[href*="index.html"] {
+a[href="index.html"] {
     animation: fadein 1.5s alternate-reverse 2s infinite;
     color: #12c2e9;
     text-decoration: none;
