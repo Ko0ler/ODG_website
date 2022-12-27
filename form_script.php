@@ -3,6 +3,7 @@
 header('Location: success.html');
 
 $name = $_POST['name'];
+
 $email = $_POST['email'];
 
 $data = [$name, $email];
