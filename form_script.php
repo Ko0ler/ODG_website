@@ -1,8 +1,7 @@
 <?php
 
-// Redirect to thank-you page
+// Redirect to success page
 header("Location: success.html");
-exit;
 
 // Get form data
 $last_name = $_POST['last_name'];
@@ -16,23 +15,24 @@ $feel = $_POST['feel'];
 $look = $_POST['look'];
 $efficiency = $_POST['efficiency'];
 
-// Create an XML document with the UTF-8 encoding attribute
-$xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><form_data></form_data>');
+// Read the existing content of the file
+$existing_content = file_get_contents('users_data.xml');
 
-// Add form data as elements to the XML document
-$xml->addChild('last_name', $last_name);
-$xml->addChild('first_name', $first_name);
-$xml->addChild('email', $email);
-$xml->addChild('country', $country);
-$xml->addChild('profession', $profession);
-$xml->addChild('other_profession', $other_profession);
-$xml->addChild('comment', $comment);
-$xml->addChild('feel', $feel);
-$xml->addChild('look', $look);
-$xml->addChild('efficiency', $efficiency);
+// Add form data as a new line to the content
+$new_line = "\n" . '<form_data>' . "\n" .
+            '    <last_name>' . $last_name . '</last_name>' . "\n" .
+            '    <first_name>' . $first_name . '</first_name>' . "\n" .
+            '    <email>' . $email . '</email>' . "\n" .
+            '    <country>' . $country . '</country>' . "\n" .
+            '    <profession>' . $profession . '</profession>' . "\n" .
+            '    <other_profession>' . $other_profession . '</other_profession>' . "\n" .
+            '    <comment>' . $comment . '</comment>' . "\n" .
+            '    <feel>' . $feel . '</feel>' . "\n" .
+            '    <look>' . $look . '</look>' . "\n" .
+            '    <efficiency>' . $efficiency . '</efficiency>' . "\n" .
+            '</form_data>';
 
-// Save the XML document to a file
-$xml->asXML('users_data.xml');
-
+// Write the new content to the file
+file_put_contents('users_data.xml', $existing_content . $new_line);
 
 ?>
