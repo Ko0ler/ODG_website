@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&family=Open+Sans&display=swap');
+
+@keyframes fadein {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadein 1.5s;
+    font-family: 'Open sans';
+    font-size: larger;
+    text-align: center;
+    margin-top: 20%;
+    }
+
+h1 {
+    color: #f64f59;
+}
+
+p {
+    font-size: medium;
+    color: grey;
+}
+
+a[href="index.html"] {
+    animation: fadein 1s alternate-reverse 1s infinite;
+    color: #12c2e9;
+    text-decoration: none;
+    }
+    
+    a:hover {
+    color: #f64f59;
+    }
