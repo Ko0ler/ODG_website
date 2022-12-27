@@ -2,189 +2,131 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Acceuil</title>
+		<link rel="stylesheet" href="form.css" />
+		<title>Formulaire</title>
 		<noscript>Enable Javascript</noscript>
 	</head>
 	<body>
-		<section id="header_nav">
-			<header>
-				<div>
-					<h1>Mohamed Ouédraogo</h1>
-					<span class="bold_grey">Computer science lover</span>
+		<header id="top">
+			<div>
+				<h1>Formulaire</h1>
+				<p class="bold_grey">Aprréciation de <a href="index.html" target="_blank" rel="referrer noopener">mon site web</a></p>	
+			</div>
+		</header>
+		<main>
+            <section>
+                <form action="form_script.php" method="post">
+                    <section class="container">
+                        <fieldset class="order_one">
+                            <legend class="bold_grey">Profil</legend>
+                            <div class="content_container_1">
+                                <div>
+                                    <label for="last_name">Nom :</label>
+                                    <input type="text" name="last_name" id="last_name" maxlength="50" required />
+                                </div>
+                                <div>
+                                    <label for="first_name">Prénom :</label>
+                                    <input type="text" name="first_name" id="first_name" maxlength="50" required />
+                                </div>
+                                <div>
+                                    <label for="email">Adresse mail :</label>
+                                    <input type="email" name="email" id="email" required />
+                                </div>
+                                <div>
+                                    <label for="country">Région :</label>
+                                    <select id="country" name="country">
+                                        <option value="cote_divoire">Côte d'Ivoire</option>
+                                        <option value="west_africa">Afrique de l'ouest</option>
+                                        <option value="africa">Afrique</option>
+                                        <option value="europe">Europe</option>
+                                        <option value="america">Amérique</option>
+                                        <option value="asia">Asie</option>
+                                        <option value="other">Martien(ne)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="profession">Profession :</label>
+                                    <select name="profession" id="profession">
+                                        <option value="developer">Développeur(euse)</option>
+                                        <option value="sysadmin">Administrateur(trice) système</option>
+                                        <option value="networking">Administrateur(trice) réseaux</option>
+                                        <option value="related">Proche de l'informatique</option>
+                                        <option value="student">Etudiant(e)</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="other_profession">Si autre (Profession), spécifier :</label>
+                                    <input type="text" name="othe_profession" id="other_profession" maxlength="70" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="order_two">
+                            <legend class="bold_grey">Appréciation</legend>
+                            <div class="content_container_2">
+                                <div class="order_one">
+                                    <p>
+                                        <label for="comment">Donnez votre impression sur ce site</label>
+                                    </p>
+                                    <textarea id="comment" name="comment" required maxlength="2000"></textarea>
+                                </div>
+                                <div class="order_two">
+                                    <div class="content_container_3 content_container_3_background">
+                                        <div class="order_one">
+                                            <p>
+                                                Avez vous aimé ce site ?
+                                            </p>
+                                            <input type="radio" name="feel" id="bad" value="bad" />
+                                            <label for="bad">Non</label>
+                                            <input type="radio" name="feel" id="little" value="little" />
+                                            <label for="little">Un peu</label>
+                                            <input type="radio" name="feel" id="good" value="good" />
+                                            <label for="good">Oui</label>
+                                        </div>
+                                        <div class="order_two">
+                                            <p>
+                                                Donnez une note :
+                                            </p>
+                                            <div>
+                                                <input type="range" name="look" id="look" min="0" max="100" value="50" step="10" required />
+                                                <label for="look">Apparence</label>    
+                                            </div>
+                                            <div>
+                                                <input type="range" name="efficiency" id="efficiency" min="0" max="100" value="50" step="10" required />
+                                                <label for="efficiency">Efficacité</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="order_three">
+                            <input class="submit_button" type="submit" value="Envoyer le formulaire" />
+                        </div>
+                    </section>
+                </form>
+            </section>
+		</main>
+		<footer id="bottom">
+			<section id="footer_container_top">
+				<div class="order_one">
+					<span class="bold_grey">Contact</span>: +225 05 75 15 25 67 (CI)<br/>
+					<span class="bold_grey">Email</span>: ouedraogomohamed008@gmail.com
 				</div>
-				<br/>
-			</header>
-			<nav>
-				<div class="mini_font_size">
-					<a class="nav_background" href="#top" title="Raccourci">Haut</a>
-					<a class="nav_background" href="#bottom" title="Raccourci">Bas</a>
+				<div class="order_two">
+					<span class="bold_grey">LinkedIn</span>: <a href="https://www.linkedin.com/in/mohamed-ouédraogo-2bb345213/" target="_blank" rel=" noopener">Mon profil</a><br/>
+					<span class="bold_grey">Facebook</span>: <a href="https://www.facebook.com/profile.php?id=100072624335009" target="_blank" rel="noreferrer noopener">Mohamed Ouédraogo</a>
 				</div>
-			</nav>
-		</section>
-		<section id="main_footer_scroll">
-			<main>
-				<section id="top" class="container_a_propos">
-					<div id="a_propos" class="order_one">
-						<h2>A propos</h2>
-						<p>
-							Je suis un passionné d'informatique âgé de 20 ans et je vis à <a href="https://fr.wikipedia.org/wiki/Abidjan" title="Capital économique de Côte d'Ivoire" target="_blank" rel="noreferrer noopener">Abidjan</a>. Je suis actuellement étudiant en réseaux informatiques et sécurité, et je me forme en parallèle au développement d'applications web et mobile ainsi qu'au design graphique. Mon objectif est de devenir ingénieur en cyber sécurité.
-
-							Sur ce portfolio, vous pourrez découvrir mes projets et mes compétences en matière de développement et de design. J'espère que vous apprécierez votre visite et n'hésitez pas à me contacter si vous avez des questions ou des propositions de collaboration.
-						</p>
-					</div>
-					<div class="order_two">
-						<div>
-							<a href="files\Images\MyDesign_blue_shiny.png" title="Cliquez pour voir" target="_blank" rel="noreferrer noopener">
-								<figure id="profil_image">
-									<img src="files\Images\MyDesign_blue_shiny_2.png" alt="Photo" />
-									<figcaption class="mini_font_size grey">
-										Image représentatif
-									</figcaption>
-								</figure>
-							</a>
-						</div>
-					</div>
-				</section>
-				<br/><br/>
-				<section>
-					<div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla ipsum, sodales sit amet diam vitae, aliquet pretium leo. Etiam porta magna leo, non molestie felis posuere vitae. Pellentesque sit amet nisi ut metus auctor eleifend in ac nisi. Mauris ornare purus ut fermentum pulvinar. Suspendisse eu est hendrerit, facilisis sapien ac, accumsan ex. Praesent ac tortor gravida, tristique lectus id, luctus massa. Quisque efficitur mattis diam, efficitur convallis lorem maximus eget. Aenean euismod odio mollis accumsan pulvinar. Aliquam dignissim consequat finibus. Donec eget egestas dui. Quisque euismod erat a sem condimentum pellentesque. Proin eu dictum dolor. Mauris vitae sodales erat. Maecenas ullamcorper dolor nec odio finibus malesuada. Integer gravida hendrerit lorem, ac laoreet magna pretium quis. Donec sagittis viverra turpis vitae dapibus. Morbi tempor odio nisl, nec consequat tortor imperdiet eget. Quisque a dolor lacinia, mattis nunc eu, mattis odio. In fringilla vitae turpis vel rhoncus. Duis maximus tempor turpis, ut ornare nisl faucibus eget. Curabitur fermentum tellus nec justo mollis blandit. Morbi sit amet turpis et leo egestas vulputate. Maecenas scelerisque vestibulum elementum. Sed vestibulum, ex quis ultricies gravida, orci neque suscipit est, quis bibendum diam sapien at risus. Maecenas nec elit et sapien vestibulum ullamcorper vitae nec ipsum. Morbi sagittis porttitor pellentesque. Maecenas euismod finibus risus eget eleifend.
-						</p>
-					</div>
-				</section>
-				<br/>
-				<section class="container_formations">
-					<div class="order_one">
-						<a href="files\Images\cap.png" title="Cliquez pour voir" target="_blank" rel="noreferrer noopener">
-							<figure id="cap">
-								<img src="files\Images\cap_mini.png" alt="Graduation cap">
-							</figure>
-						</a>
-					</div>
-					<div id="formation" class="order_two">
-						<div id="formation_intro">
-							<h2>Mes formations</h2>
-						</div>
-						<div id="formation_details">
-							<ul>
-								<li>
-									<span class="bold">Université virtuelle de Côte d'Ivoire : </span>2021 - 2023<br/>
-									Licence général en Réseau et sécurité informatique
-								</li>
-							</ul>
-							<ul>
-								<li>
-									Formation <span class="bold">Agence emploi jeune </span><em>(AEJ)</em> : 2021<br/>
-									Certification en infographie
-								</li>
-							</ul>
-							<ul>
-								<li>
-									Self-taught en <span class="bold">Ingenierie logiciel</span> depuis 2022
-								</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<section>
-					<div id="scroll_image"></div>
-				</section>
-				<section class="container_competences">
-					<div id="competences" class="order_one">
-						<div id="competences_intro">
-							<h2>Mes compétences</h2>
-							<p>
-								Pendant ma formation, et du fait de l'expérience acqui en travaillant fréquenment, j'ai acquéri les compétences suivant:
-							</p>
-						</div>
-						<div id="competences_details">
-							<ul>
-								<li>Administration d'un système <span class="bold">Windows et linux</span> (client et serveur)
-								</li>
-								<li>Création, administration et maintenance d'un domaine <span class="bold">Active directory</span>
-								</li>
-								<li>Création et administration d'un <span class="bold">réseaux informatique</span>
-								</li>
-								<li>Developpement en <span class="bold">JAVA et Python</span>
-								</li>
-								<li>Developpement en web full-stack <span class="bold">React/Angular et Spring/Node</span>
-								</li>
-								<li>Je suis aussi <span class="bold">designer graphique</span> et bilingue, <span class="bold">Anglais et Français</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="order_two ">
-						<a href="files\Images\Illustration.png" title="Cliquez pour voir" target="_blank" rel="noreferrer noopener">
-							<figure  id="illustration">
-								<img src="files\Images\Illustration_mini.png" alt="Microsoft" />
-								<figcaption class="mini_font_size grey">
-									Illustration de compétences
-								</figcaption>
-							</figure>
-						</a>
-					</div>
-				</section>
-				<br/><br/>
-				<section>
-					<div id="exp">
-						<h2>Expérience et exploits</h2>
-						<br/>
-						<div id="experience">
-							<ul class="circle_ul">
-								<li><h3 class="bold_grey">Expérience</h3></li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla ipsum, sodales sit amet diam vitae, aliquet pretium leo. Etiam porta magna leo, non molestie felis posuere vitae. Pellentesque sit amet nisi ut metus auctor eleifend in ac nisi. Mauris ornare purus ut fermentum pulvinar. Suspendisse eu est hendrerit, facilisis sapien ac, accumsan ex. Praesent ac tortor gravida, tristique lectus id, luctus massa. Quisque efficitur mattis diam, efficitur convallis lorem maximus eget. Aenean euismod odio mollis accumsan pulvinar. Aliquam dignissim consequat finibus. Donec eget egestas dui. Quisque euismod erat a sem condimentum pellentesque.
-
-								Proin eu dictum dolor. Mauris vitae sodales erat. Maecenas ullamcorper dolor nec odio finibus malesuada. Integer gravida hendrerit lorem, ac laoreet magna pretium quis. Donec sagittis viverra turpis vitae dapibus. Morbi tempor odio nisl, nec consequat tortor imperdiet eget. Quisque a dolor lacinia, mattis nunc eu, mattis odio. In fringilla vitae turpis vel rhoncus. Duis maximus tempor turpis, ut ornare nisl faucibus eget. Curabitur fermentum tellus nec justo mollis blandit. Morbi sit amet turpis et leo egestas vulputate. Maecenas scelerisque vestibulum elementum. Sed vestibulum, ex quis ultricies gravida, orci neque suscipit est, quis bibendum diam sapien at risus. Maecenas nec elit et sapien vestibulum ullamcorper vitae nec ipsum. Morbi sagittis porttitor pellentesque. Maecenas euismod finibus risus eget eleifend.</p>
-						</div>
-						<br/>
-						<div id="exploits">
-							<ul class="circle_ul">
-								<li><h3 class="bold_grey">Exploits</h3></li>
-							</ul>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla ipsum, sodales sit amet diam vitae, aliquet pretium leo. Etiam porta magna leo, non molestie felis posuere vitae. Pellentesque sit amet nisi ut metus auctor eleifend in ac nisi. Mauris ornare purus ut fermentum pulvinar. Suspendisse eu est hendrerit, facilisis sapien ac, accumsan ex. Praesent ac tortor gravida, tristique lectus id, luctus massa. Quisque efficitur mattis diam, efficitur convallis lorem maximus eget. Aenean euismod odio mollis accumsan pulvinar. Aliquam dignissim consequat finibus. Donec eget egestas dui. Quisque euismod erat a sem condimentum pellentesque.
-
-								Proin eu dictum dolor. Mauris vitae sodales erat. Maecenas ullamcorper dolor nec odio finibus malesuada. Integer gravida hendrerit lorem, ac laoreet magna pretium quis. Donec sagittis viverra turpis vitae dapibus. Morbi tempor odio nisl, nec consequat tortor imperdiet eget. Quisque a dolor lacinia, mattis nunc eu, mattis odio. In fringilla vitae turpis vel rhoncus. Duis maximus tempor turpis, ut ornare nisl faucibus eget. Curabitur fermentum tellus nec justo mollis blandit. Morbi sit amet turpis et leo egestas vulputate. Maecenas scelerisque vestibulum elementum. Sed vestibulum, ex quis ultricies gravida, orci neque suscipit est, quis bibendum diam sapien at risus. Maecenas nec elit et sapien vestibulum ullamcorper vitae nec ipsum. Morbi sagittis porttitor pellentesque. Maecenas euismod finibus risus eget eleifend.</p>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<section>
-					<div id="form_link">
-						<h3>
-							<span id="form_link_background">
-								<a class="grey" href="form.html" title="Cliquez pour remplir un formulaire" target="_blank" rel="noreferrer noopener">
-									Evaluez mon site web !
-								</a>	
-							</span>
-						</h3>
-					</div>
-				</section>
-			</main>
-			<footer id="bottom">
-				<section id="footer_container_top">
-					<div class="order_one">
-						<span class="bold_grey">Contact</span>: +225 05 75 15 25 67 (CI)<br/>
-						<span class="bold_grey">Email</span>: ouedraogomohamed008@gmail.com
-					</div>
-					<div class="order_two">
-						<span class="bold_grey">LinkedIn</span>: <a href="https://www.linkedin.com/in/mohamed-ouédraogo-2bb345213/" target="_blank" rel=" noopener">Mon profil</a><br/>
-						<span class="bold_grey">Facebook</span>: <a href="https://www.facebook.com/profile.php?id=100072624335009" target="_blank" rel="noreferrer noopener">Mohamed Ouédraogo</a>
-					</div>
-					<div class="order_three">
-						<span class="bold_grey">Github</span>: <a href="https://github.com/Mhd008" target="_blank" rel="noreferrer noopener">https://github.com/Mhd008</a><br/>
-						<span class="bold_grey">Website</span>: Avenir ...
-					</div>
-				</section>
-				<section id="footer_container_bottom" class="bold_grey">
-					<span>
-						Copyright &#169; • 2022 • Tous droits réservés
-					</span>
-				</section>
-			</footer>
-		</section>
+				<div class="order_three">
+					<span class="bold_grey">Github</span>: <a href="https://github.com/Mhd008" target="_blank" rel="noreferrer noopener">https://github.com/Mhd008</a><br/>
+					<span class="bold_grey">Site web</span>: Avenir ...
+				</div>
+			</section>
+			<section id="footer_container_bottom" class="bold_grey">
+				<span>
+					Copyright &#169; • Tous droits réservés • 2022
+				</span>
+			</section>
+		</footer>
 	</body>
 </html>
