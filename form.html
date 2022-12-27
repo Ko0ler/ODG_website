@@ -19,18 +19,18 @@
                     <section class="container">
                         <fieldset class="order_one">
                             <legend class="bold_grey">Profil</legend>
-                            <div class="field_container_1">
+                            <div class="content_container_1">
                                 <div>
                                     <label for="last_name">Nom :</label>
                                     <input type="text" name="last_name" id="last_name" maxlength="50" required />
                                 </div>
                                 <div>
                                     <label for="first_name">Prénom :</label>
-                                    <input type="text" id="first_name" maxlength="50" required />
+                                    <input type="text" name="first_name" id="first_name" maxlength="50" required />
                                 </div>
                                 <div>
                                     <label for="mail">Adresse mail :</label>
-                                    <input type="email" id="mail" required />
+                                    <input type="email" name="mail" id="mail" required />
                                 </div>
                                 <div>
                                     <label for="country">Région :</label>
@@ -41,39 +41,63 @@
                                         <option value="europe">Europe</option>
                                         <option value="america">Amérique</option>
                                         <option value="asia">Asie</option>
-                                        <option value="other">Extraterrestre</option>
+                                        <option value="other">Martien(ne)</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label for="profession">Profession :</label>
                                     <select name="professions" id="profession" >
-                                        <option value="developer" selected>Développeur</option>
-                                        <option value="sysadmin">Administrateur système</option>
-                                        <option value="networking">Administrateur réseaux</option>
+                                        <option value="developer" selected>Développeur(euse)</option>
+                                        <option value="sysadmin">Administrateur(trice) système</option>
+                                        <option value="networking">Administrateur(trice) réseaux</option>
                                         <option value="related">Proche de l'informatique</option>
-                                        <option value="student">Etudiant</option>
+                                        <option value="student">Etudiant(e)</option>
                                         <option value="other">Autre</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label for="other_profession">Si autre (Profession), spécifier :</label>
-                                    <input type="text" id="other_profession" maxlength="70" />
+                                    <input type="text" name="othe_profession" id="other_profession" maxlength="70" />
                                 </div>
                             </div>
                         </fieldset>
                         <fieldset class="order_two">
                             <legend class="bold_grey">Appréciation</legend>
-                            <div class="field_container_2">
+                            <div class="content_container_2">
                                 <div class="order_one">
                                     <p>
                                         <label for="comment">Donnez votre impression sur ce site</label>
                                     </p>
-                                    <textarea id="comment" required maxlength="200"></textarea>
+                                    <textarea id="comment" name="comment" required maxlength="2000"></textarea>
                                 </div>
                                 <div class="order_two">
-                                    <label for="mark">Donnez une note sur 10 :</label>
-                                    <input type="text" id="mark"  placeholder="Ex: 8/10 ou 8" maxlength="5" required />
-                                </div>    
+                                    <div class="content_container_3 content_container_3_background">
+                                        <div class="order_one">
+                                            <p>
+                                                Avez vous aimé ce site ?
+                                            </p>
+                                            <input type="radio" name="feel" id="bad" value="bad" />
+                                            <label for="bad">Non</label>
+                                            <input type="radio" name="feel" id="little" value="little" />
+                                            <label for="little">Un peu</label>
+                                            <input type="radio" name="feel" id="good" value="good" />
+                                            <label for="good">Oui</label>
+                                        </div>
+                                        <div class="order_two">
+                                            <p>
+                                                Donnez une note :
+                                            </p>
+                                            <div>
+                                                <input type="range" name="mark" id="look" min="0" max="100" value="50" step="10" required />
+                                                <label for="look">Apparence</label>    
+                                            </div>
+                                            <div>
+                                                <input type="range" name="mark" id="efficiency" min="0" max="100" value="50" step="10" required />
+                                                <label for="efficiency">Efficacité</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </fieldset>
                         <div class="order_three">
@@ -102,7 +126,7 @@
 			</section>
 			<section id="footer_container_bottom" class="bold_grey">
 				<span>
-					Copyright &#169; • 2022 • Tous droits réservés
+					Copyright &#169; • Tous droits réservés • 2022
 				</span>
 			</section>
 		</footer>
