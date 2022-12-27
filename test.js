@@ -4,4 +4,3 @@ let test2 = "Content ${y}";
 x = typeof (test1);
 y = typeof (test2);
 console.log (x, y);
-
