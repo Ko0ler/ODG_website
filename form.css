@@ -16,7 +16,7 @@ header {
 main {
     font-family: 'Open sans', Arial, 'Sans serif';
     font-size: large;
-    margin: 2em;
+    margin: 4em;
 }
 
 footer {
@@ -47,7 +47,7 @@ footer {
     gap: 2em;
 }
 
-.field_container_1 {
+.content_container_1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -55,16 +55,31 @@ footer {
     padding: 0.5em;
 }
 
-.field_container_2 {
+.content_container_2 {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     padding: 0.5em;
 }
 
+.content_container_3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8em;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_container_3_background {
+    background-color: rgb(235, 235, 235);
+    border-radius: 1em;
+    padding: 2em;
+}
+
 input, select {
     font-size: smaller;
-    border: 0.2em solid silver;
+    border: 0.1em solid silver;
     border-radius: 0.5em;
     padding: 0.3em;
     background-color: rgb(243, 243, 243);
@@ -73,12 +88,13 @@ input, select {
 fieldset {
     border: 0.2em solid silver;
     border-radius: 0.5em;
+    padding: 2em;
     width: auto;
 }
 
 textarea {
-    border: 0.2em solid silver;
-    border-radius: 0.5em;
+    border: 0.15em solid silver;
+    border-radius: 1em;
 }
 
 .submit_button {
@@ -124,7 +140,7 @@ a {
 
 textarea {
     width: 100%;
-    height: 20em;
+    height: 30em;
 }
 
 a:hover {
