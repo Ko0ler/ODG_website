@@ -175,6 +175,16 @@ a:focus {
 
     /* Mini tablet and mobile */
 
+    @media screen and (max-width: 950px) {
+        .content_container_3 {
+            display: flex;
+            flex-direction: column;
+            gap: 3em;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     @media screen and (max-width: 518px) {
 
         body {
