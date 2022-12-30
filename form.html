@@ -15,7 +15,7 @@
 		</header>
 		<main>
             <section>
-                <form action="form_script.php" method="get">
+                <form action="form_script.php" method="post">
                     <section class="container">
                         <fieldset class="order_one">
                             <legend class="bold_grey">Profil</legend>
@@ -29,8 +29,8 @@
                                     <input type="text" name="first_name" id="first_name" maxlength="50" required />
                                 </div>
                                 <div>
-                                    <label for="mail">Adresse mail :</label>
-                                    <input type="email" name="mail" id="mail" required />
+                                    <label for="email">Adresse mail :</label>
+                                    <input type="email" name="email" id="email" required />
                                 </div>
                                 <div>
                                     <label for="country">Région :</label>
@@ -46,8 +46,8 @@
                                 </div>
                                 <div>
                                     <label for="profession">Profession :</label>
-                                    <select name="professions" id="profession" >
-                                        <option value="developer" selected>Développeur(euse)</option>
+                                    <select name="profession" id="profession">
+                                        <option value="developer">Développeur(euse)</option>
                                         <option value="sysadmin">Administrateur(trice) système</option>
                                         <option value="networking">Administrateur(trice) réseaux</option>
                                         <option value="related">Proche de l'informatique</option>
@@ -66,7 +66,10 @@
                             <div class="content_container_2">
                                 <div class="order_one">
                                     <p>
-                                        <label for="comment">Donnez votre impression sur ce site</label>
+                                        <label for="comment">
+                                            Donnez votre impression sur ce site: 
+                                            <br/><span class="grey">(n'héseitez paz à donner des suggestions)</span>
+                                        </label>
                                     </p>
                                     <textarea id="comment" name="comment" required maxlength="2000"></textarea>
                                 </div>
@@ -88,11 +91,11 @@
                                                 Donnez une note :
                                             </p>
                                             <div>
-                                                <input type="range" name="mark" id="look" min="0" max="100" value="50" step="10" required />
+                                                <input type="range" name="look" id="look" min="0" max="100" value="50" step="10" required />
                                                 <label for="look">Apparence</label>    
                                             </div>
                                             <div>
-                                                <input type="range" name="mark" id="efficiency" min="0" max="100" value="50" step="10" required />
+                                                <input type="range" name="efficiency" id="efficiency" min="0" max="100" value="50" step="10" required />
                                                 <label for="efficiency">Efficacité</label>
                                             </div>
                                         </div>
@@ -101,9 +104,7 @@
                             </div>
                         </fieldset>
                         <div class="order_three">
-                            <form action="form.csv" method="post">
-                                <input class="submit_button" type="submit" value="Envoyer le formulaire" />
-                            </form>
+                            <input class="submit_button" type="submit" value="Envoyer le formulaire" />
                         </div>
                     </section>
                 </form>
