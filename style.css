@@ -172,6 +172,12 @@ a {
     padding: 1em;
 }
 
+.shaddow:hover {
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+    color: #f64f59;
+    text-decoration: none;
+}
+
 header:hover {
     background-image: url('files/Images/Pattern.png');
 }
