@@ -11,54 +11,43 @@
     }
 }
 
-body {
+body {    
+    font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif';
     background-image: url('files/Images/Background1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
 }
 
 header {
-    font-family: 'Lobster Two';
     font-size: larger;
-    text-align: center;
-    background: linear-gradient(90deg, #12c2e950, #c471ed50, #f64f5950);
-    padding: 1em 0 1em 0;
+    text-align: start;
+    background-image: url('files/Images/Pattern.png');
+    padding: 0.4em 0 0.4em 0;
 }
 
 nav {
-    font-family: 'Open sans';
-    margin-top: 0.5em;
-}
-
-.nav_background {
-    border-radius: 0.3em;
-    padding: 0.5em;
-    background-color: #ffd6da;
-}
-
-#header_nav {
-    position: sticky;
-    top: 0;
-    padding-bottom: 1.5em;
+    position: fixed;
+    bottom: 1em;
+    right: 0;
 }
 
 main {
     font-size: 0.9em;
     line-height: 1.5em;
-    font-family: 'Montserrat', 'Open sans', Arial, 'Sans serif';
     text-align: justify;
-    margin: 1em 7em 0.5em 7em;
+    padding: 5em 8em 0 6em;
 }
 
-#main_footer_scroll {
+/* #main_footer_scroll {
     margin-right: 0.8em;
     height: 77%;
     overflow: scroll;
     overflow-x: hidden;
     position: fixed;
     bottom: 0;
-}
+} */
 
 footer {
     font-family: 'Open sans';
@@ -66,7 +55,7 @@ footer {
     background: linear-gradient(-90deg, #12c2e950, #c471ed50, #f64f5950);
     border-radius: 80px 10px 80px 10px;
     padding: 0.5em 0 1em 3em;
-    margin: 5em 1em 0.1em 1em;
+    margin: 0 1em 0.1em 1em;
 }
 
 .order_one {
@@ -79,6 +68,25 @@ footer {
 
 .order_three {
     order: 3;
+}
+
+.container_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: auto;
+}
+
+.container_header_links {
+    font-size: medium;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 3em;
+    row-gap: 1em;
 }
 
 .container_a_propos {
@@ -112,14 +120,14 @@ footer {
     align-items: center;
     gap: 3em;
     flex-wrap: wrap;
-    margin: 1.3em 0 0.7em 0em;
+    margin: 1.3em 0 0.7em 0;
 }
 
 #footer_container_bottom {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 2em 0 0.7em 0em;
+    margin: 2em 0 0.7em 0;
 }
 
 h1 + p {
@@ -134,6 +142,22 @@ h1, h2 {
 a {
     color: #f64f59;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #12c2e9;
+}
+
+.link_background {
+    border-radius: 0.3em;
+    padding: 0.3em;
+    background-color: rgb(226, 226, 226);
+}
+
+.link_background:hover {
+    background-color: #f1f1f1;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 #profil_image {
@@ -172,27 +196,21 @@ a {
     padding: 1em;
 }
 
-.shaddow:hover {
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-    color: #f64f59;
-    text-decoration: none;
+.shaddow {
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.205);
 }
 
 header:hover {
     background-image: url('files/Images/Pattern.png');
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #12c2e9;
-}
-
-a:focus {
-    background-color: #12c2e9;
-}
-
 .mini_font_size {
-    font-size: 0.8em;
+    font-size: medium;
+}
+
+.fancy_typo {    
+    font-family: 'Lobster Two';
 }
 
 .bold_grey {
@@ -221,7 +239,7 @@ a:focus {
     @media screen and (max-width: 1133px) {
 
         main {
-            margin: 0.7em 5em 0.5em 6em;
+            padding: 0.7em 5em 0.5em 6em;
             font-size: small;
         }
 
@@ -240,7 +258,7 @@ a:focus {
     @media screen and (max-width: 878px) {
 
         main {
-            margin: 0.5em 5em 0.4em 5em;
+            padding: 0.5em 5em 0.4em 5em;
         }
 
         section[class="container_formations"] {
@@ -256,20 +274,36 @@ a:focus {
     
     /* Mobile */
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 600px) {
+
+        header {
+            padding-bottom: 1em;
+            text-align: center;
+        }
+
+        .container_header {
+            flex-direction: column;
+        }
+
+        .container_header_links {
+            font-size: x-small;
+            display: flex;
+            gap: 1em;
+            flex-direction: row;
+        }
 
         #header_nav {
             font-size: small;
         }
 
         main {
-            margin: 1.1em;
             font-size: smaller;
             text-align: justify;
+            padding: 1em;
         }
 
         nav {
-            text-align: center;            
+            display: none;            
         }
 
         #cap, #illustration {
