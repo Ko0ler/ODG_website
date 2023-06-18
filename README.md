@@ -1,6 +1,6 @@
 # ODG_website
 
-Welcome to my website! This is a portfolio website that showcases my projects and accomplishments as a developer, designer, and creative professional. I study in networking and security at university, and i'm learning sofware engineering and web development with side projects
+This portfolio website showcases my projects and accomplishments as an Infosec student. I'm studying general IT and offensive security, and doing side projects to improve myself.
 
 ## Pages
 
@@ -16,15 +16,8 @@ This website was built using the following technologies:
 - CSS
 - PHP
 
-## Setup
-
-To set up the website on your local machine, follow these steps:
-
-1. Clone the repository to your local machine
-2. Install the dependencies listed above
-3. Start the Apache server
-4. Open the website in your web browser by visiting https://my-portfolio-odg.000webhostapp.com/
+## The website link will be provided once hosted
 
 ## License
 
-This website is licensed under the [MIT License](LICENSE).
+This website is licensed under the MIT License.
