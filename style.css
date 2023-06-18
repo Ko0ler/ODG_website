@@ -11,13 +11,16 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {    
     font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif';
     background-image: url('files/Images/Background1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -29,7 +32,7 @@ header {
 
 nav {
     position: fixed;
-    bottom: 1em;
+    bottom: 4em;
     right: 0;
 }
 
