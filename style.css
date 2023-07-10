@@ -16,17 +16,17 @@ html {
 }
 
 body {    
-    font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif';
     background-image: url('files/Images/Background1.jpg');
+    font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif';
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 header {
+    background-image: url('files/Images/Pattern.png');
     font-size: larger;
     text-align: left;
-    background-image: url('files/Images/Pattern.png');
     padding: 0.4em 0 0.4em 0;
 }
 
