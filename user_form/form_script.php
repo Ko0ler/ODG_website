@@ -14,7 +14,8 @@ $efficiency = htmlspecialchars($_POST['efficiency']);
 
 // Validate email format
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email format");
+    header("Location: /submission_review/error.html");
+    exit();
 }
 
 // Future feature to add
@@ -47,6 +48,6 @@ $json = json_encode($xml);
 file_put_contents('users_data.json', $json, LOCK_EX);
 
 // Redirect to success page
-header("Location: success.html");
+header("Location: /submission_review/success.html");
 exit();
 ?>
