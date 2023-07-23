@@ -39,11 +39,12 @@ $new_line = "\n" . '<form_data>' . "\n" .
     '    <efficiency>' . $efficiency . '</efficiency>' . "\n" .
     '</form_data>';
 
-// Encode the XML data
-$new_line = htmlspecialchars($new_line);
+// Encode the XML data to JSON
+$xml = simplexml_load_string($existing_content . $new_line);
+$json = json_encode($xml);
 
-// Write the new content to the file
-file_put_contents('users_data.xml', $existing_content . $new_line, LOCK_EX);
+// Write the new JSON content to the file
+file_put_contents('users_data.json', $json, LOCK_EX);
 
 // Redirect to success page
 header("Location: success.html");
