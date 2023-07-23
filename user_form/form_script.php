@@ -18,34 +18,31 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-// Future feature to add
-// Authenticate and authorize user
-// Add the authentication and authorization logic
-// For example, we can check if the user is logged in or has the necessary privileges
+// Prepare the new form data as an associative array
+$new_data = array(
+    'last_name' => $last_name,
+    'first_name' => $first_name,
+    'email' => $email,
+    'country' => $country,
+    'profession' => $profession,
+    'other_profession' => $other_profession,
+    'comment' => $comment,
+    'feel' => $feel,
+    'look' => $look,
+    'efficiency' => $efficiency
+);
 
-// Read the existing content of the file
-$existing_content = file_get_contents('users_data.xml');
+// Encode the new data as JSON
+$json_data = json_encode($new_data);
 
-// Prepare the new form data as XML
-$new_line = "\n" . '<form_data>' . "\n" .
-    '    <last_name>' . $last_name . '</last_name>' . "\n" .
-    '    <first_name>' . $first_name . '</first_name>' . "\n" .
-    '    <email>' . $email . '</email>' . "\n" .
-    '    <country>' . $country . '</country>' . "\n" .
-    '    <profession>' . $profession . '</profession>' . "\n" .
-    '    <other_profession>' . $other_profession . '</other_profession>' . "\n" .
-    '    <comment>' . $comment . '</comment>' . "\n" .
-    '    <feel>' . $feel . '</feel>' . "\n" .
-    '    <look>' . $look . '</look>' . "\n" .
-    '    <efficiency>' . $efficiency . '</efficiency>' . "\n" .
-    '</form_data>';
+// Read existing JSON data from the file
+$existing_data = file_get_contents('users_data.json');
 
-// Encode the XML data to JSON
-$xml = simplexml_load_string($existing_content . $new_line);
-$json = json_encode($xml);
+// Append the new data to the existing JSON data
+$existing_data .= $json_data . PHP_EOL;
 
-// Write the new JSON content to the file
-file_put_contents('users_data.json', $json, LOCK_EX);
+// Write the JSON data to the file
+file_put_contents('users_data.json', $existing_data, LOCK_EX);
 
 // Redirect to success page
 header("Location: /submission_review/success.html");
