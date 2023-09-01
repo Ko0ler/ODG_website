@@ -15,8 +15,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {    
-    background-image: url('files/Images/Background1.jpg');
+body {
     font-family: 'Montserrat', 'Open sans', 'Arial', 'Sans serif';
     background-attachment: fixed;
     background-size: cover;
@@ -24,7 +23,6 @@ body {
 }
 
 header {
-    background-image: url('files/Images/Pattern.png');
     font-size: larger;
     text-align: left;
     padding: 0.4em 0 0.4em 0;
@@ -37,10 +35,10 @@ nav {
 }
 
 main {
+    color: rgb(84, 84, 84);
     font-size: medium;
     font-weight: bold;
     line-height: 1.8em;
-    text-align: justify;
     padding: 5em 8em 0 6em;
 }
 
